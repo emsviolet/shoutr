@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_07_162311) do
+ActiveRecord::Schema.define(version: 2022_01_07_163400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "guests", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "photo_shouts", force: :cascade do |t|
+    t.string "image_file_name", null: false
+    t.string "image_content_type", null: false
+    t.bigint "image_file_size", null: false
+    t.datetime "image_updated_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
