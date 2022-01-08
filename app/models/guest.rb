@@ -6,5 +6,4 @@ class Guest < ApplicationRecord
   def liked?(_)
     false
   end
-
 end
